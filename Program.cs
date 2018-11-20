@@ -23,7 +23,7 @@ namespace kestrel
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+            new WebHostBuilder()
                 .UseKestrel(x => { })
                 .UseUrls(new [] { "http://localhost:8081" })                
                 .UseStartup<Startup>();
